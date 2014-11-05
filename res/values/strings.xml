@@ -4,9 +4,16 @@
     <string name="app_name">HangManMVC</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_loader">LoaderActivity</string>
 	<string-array name="categories">
 	    <item>fruit</item>
 	    <item>animal</item>
 	</string-array>
+	<string name="victory_message">You win! This time.</string>
+	<string name="defeat_message">YOUR SOUL IS MINE!</string>
+	<string name="category_selection_message_p1">You have chosen : </string>
+	<string name="category_selection_message_p2"> as your category!</string>
+	<string name="load_message1">Checking Connection</string>
+	<string name="load_message2">Loading Awesomeness</string>
+	<string name="load_message3">Taking care of stuff</string>
+	<string name="load_message4">Hiding the bodies</string>
 </resources>

@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.annotation.SuppressLint;
 import android.app.ActionBar.LayoutParams;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -67,6 +68,7 @@ public class MainActivity extends ActionBarActivity implements Observer {
 	this.controller.checkLetter(letterChar);
 }
 	private void disableButtons(){
+		letters.setEnabled(false);
 		
 	}
 	@SuppressLint("NewApi")
@@ -162,17 +164,17 @@ public class MainActivity extends ActionBarActivity implements Observer {
   	}
   	public void handleWon(){
 		Context context = getApplicationContext();
-		Toast toast = Toast.makeText(context, "You won! This time...", 10);
+		Toast toast = Toast.makeText(context, getString(R.string.victory_message), 30);
 		toast.show();
-		android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(1);
+		disableButtons();
+
   	}
   	public void handleLost(){
 		Context context = getApplicationContext();
-		Toast toast = Toast.makeText(context, "You have met a terrible fate haven't you?", 10);
+		Toast toast = Toast.makeText(context, getString(R.string.defeat_message), 30);
 		toast.show();
-		android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(1);
+		disableButtons();
+
   	}
   	private void fillVariables(){
 		this.word = controller.getWord();

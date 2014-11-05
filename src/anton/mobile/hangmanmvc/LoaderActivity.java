@@ -51,7 +51,7 @@ public class LoaderActivity extends ActionBarActivity {
 		Spinner s = (Spinner) findViewById(R.id.spinnerCategories);
 		this.category = String.valueOf(s.getSelectedItem());
 		Context context = getApplicationContext();
-		Toast toast = Toast.makeText(context, "You have chosen : " + category + " as your category!", 10);
+		Toast toast = Toast.makeText(context, getString(R.string.category_selection_message_p1) + " " + category + " " + getString(R.string.category_selection_message_p2), 10);
 		toast.show();
 		mHandler = new Handler();
 		mHandler.postDelayed(myTask, 20);
@@ -81,11 +81,13 @@ public class LoaderActivity extends ActionBarActivity {
 		  public void run() {
 			 
 			 if (val >= 25 && val < 75) {
-				 txtpb.setText("Checking Connection");
+				 txtpb.setText(getString(R.string.load_message1));
 			 } else if (val >= 75 && val < 125) {
-				 txtpb.setText("Loading Awesomeness");
-			 } else if (val >= 125 && val < 200) {
-				 txtpb.setText("Taking care of it");
+				 txtpb.setText(getString(R.string.load_message2));
+			 } else if (val >= 125 && val < 185) {
+				 txtpb.setText(getString(R.string.load_message3));
+				 } else if (val >= 185 && val < 200) {
+				 txtpb.setText(getString(R.string.load_message4));
 			 } else if (val == 200) {
 				 mHandler.removeCallbacks(myTask);
 				 goToMainActivity();

@@ -369,8 +369,15 @@ int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
+int string category_selection_message_p1 0x7f0a0012
+int string category_selection_message_p2 0x7f0a0013
+int string defeat_message 0x7f0a0011
 int string hello_world 0x7f0a000e
-int string title_activity_loader 0x7f0a0010
+int string load_message1 0x7f0a0014
+int string load_message2 0x7f0a0015
+int string load_message3 0x7f0a0016
+int string load_message4 0x7f0a0017
+int string victory_message 0x7f0a0010
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063
